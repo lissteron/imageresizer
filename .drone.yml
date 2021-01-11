@@ -7,3 +7,11 @@ steps:
   image: alpine
   commands:
   - echo hello world
+
+- name: docker  
+  image: plugins/docker
+  settings:
+    repo: drone.3l8.ru/registry/imageresizer
+    registry: drone.3l8.ru
+    tags:
+      - latest
