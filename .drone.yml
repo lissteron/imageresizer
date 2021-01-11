@@ -11,7 +11,7 @@ steps:
 - name: docker  
   image: plugins/docker
   settings:
-    repo: http://188.246.224.199:5000/lissteron/imageresizer
+    repo: 188.246.224.199:5000/lissteron/imageresizer
     registry: http://188.246.224.199:5000
     tags:
       - latest
