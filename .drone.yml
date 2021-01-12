@@ -16,4 +16,4 @@ steps:
 volumes:
 - name: go-cache
   host:
-    path: /drone/go
+    path: /tmp/go
