@@ -5,15 +5,9 @@ name: greeting
 steps:
 - name: docker  
   image: plugins/docker
-  volumes:
-    - name: go-cache
-      path: /go
   settings:
     repo: registry.3l8.ru/lissteron/imageresizer
     registry: registry.3l8.ru
     auto_tag: true
 
-volumes:
-- name: go-cache
-  host:
-    path: /tmp/go
+
