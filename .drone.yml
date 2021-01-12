@@ -3,15 +3,17 @@ type: docker
 name: greeting
 
 steps:
-- name: en
-  image: alpine
-  commands:
-  - echo hello world
-
 - name: docker  
   image: plugins/docker
+  volumes:
+    - name: go-cache
+      path: /go
   settings:
     repo: registry.3l8.ru/lissteron/imageresizer
     registry: registry.3l8.ru
-    tags:
-      - latest
+    auto_tag: true
+
+volumes:
+- name: go-cache
+  host:
+    path: /tmp/go
