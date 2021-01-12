@@ -3,7 +3,8 @@ type: docker
 name: greeting
 
 steps:
-- name: docker  
+- name: docker
+  pull: if-not-exists
   image: plugins/docker
   settings:
     repo: registry.3l8.ru/lissteron/imageresizer
